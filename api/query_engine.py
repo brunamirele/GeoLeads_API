@@ -1,12 +1,13 @@
 import duckdb
 import math
 import numpy as np
+import os
 
 # 🔐 CONFIGURAÇÕES DO R2 (PREENCHER!)
-S3_ACCESS_KEY = "84a0e359248d26886fedea13d97c1a0d"
-S3_SECRET_KEY = "098f680a704073c507d5928efb655f9ce14d82808814758caa3ee4d19658b214"
-S3_ENDPOINT = "b45d1e7d377211530520ec305557fff8.r2.cloudflarestorage.com"
-S3_BUCKET = "dados-rf"
+S3_ACCESS_KEY = os.getenv("S3_ACCESS_KEY")
+S3_SECRET_KEY = os.getenv("S3_SECRET_KEY")
+S3_ENDPOINT = os.getenv("S3_ENDPOINT")
+S3_BUCKET = os.getenv("S3_BUCKET")
 
 # cria conexão global (melhor performance)
 con = duckdb.connect()
