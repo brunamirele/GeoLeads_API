@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from query_engine import buscar_empresas
+from api.query_engine import buscar_empresas
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
